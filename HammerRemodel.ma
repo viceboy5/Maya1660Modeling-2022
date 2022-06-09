@@ -1,10 +1,9 @@
 //Maya ASCII 2023 scene
 //Name: HammerRemodel.ma
-//Last modified: Wed, Jun 08, 2022 09:34:32 PM
+//Last modified: Wed, Jun 08, 2022 09:56:29 PM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.0";
-requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -12,17 +11,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202202161415-df43006fd3";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "73C67897-4543-EAD3-F4D4-12913228A606";
+fileInfo "UUID" "F627DF9D-4B5A-C163-3F85-3BABF4392977";
 createNode transform -s -n "persp";
 	rename -uid "4B2EBF04-4CA7-1D34-E41E-4AB0DA74C27E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.898301487882822 23.755774968914945 -1.4983610166217307 ;
-	setAttr ".r" -type "double3" -41.738352719793873 -262.59999999992755 5.0888874903416268e-14 ;
+	setAttr ".t" -type "double3" 11.054376225423262 19.755445793392006 -15.954771209901882 ;
+	setAttr ".r" -type "double3" -22.538352719785042 -216.19999999991751 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "04E788D6-409E-8B2A-5A4E-FEBE2E1A6387";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 18.553915665312914;
+	setAttr ".coi" 21.788495380158714;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -88,13 +87,13 @@ createNode mesh -n "Hammer_MeshShape" -p "Hammer_Mesh";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.17930018901824951 0.49718698859214783 ;
+	setAttr ".pv" -type "double2" 0.51116478986505343 0.44452895980331608 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 19 ".pt";
+	setAttr -s 14 ".pt";
 	setAttr ".pt[130]" -type "float3" 0 4.6566129e-10 -7.4505806e-09 ;
 	setAttr ".pt[131]" -type "float3" 3.7252903e-09 -9.3132257e-10 0 ;
 	setAttr ".pt[132]" -type "float3" 0 9.3132257e-10 0 ;
@@ -482,19 +481,19 @@ createNode mesh -n "polySurfaceShape1" -p "Hammer_Mesh";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "28CD37B4-411A-F266-C1B4-35ADD5010A29";
+	rename -uid "AB05B40A-4959-BD7C-00F0-0FB780CA3381";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "EFE3DD30-4D9B-C523-0643-1F964FAF4405";
+	rename -uid "641DFE8F-4A9F-23FE-D968-71AF63A1B783";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F4A99AB3-44B6-F2B4-89FF-6FAFE6F4C6D9";
+	rename -uid "27AA1E4E-49CD-32FB-6D26-DB9F37A0DEAF";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "5F591E95-423F-B1D5-974F-4191D612891F";
+	rename -uid "79033060-40E6-302D-BC88-49A7B5790F6B";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "F42565BB-4263-4E33-9BE9-CEB7742E4AC2";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7EEF318F-4B02-2053-86E3-758A6FA6F66A";
+	rename -uid "04C53575-483E-9FA5-A235-03928401105D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B4828BF8-4E1A-8927-AF41-5CBEC28F6AF8";
 	setAttr ".g" yes;
@@ -715,6 +714,61 @@ createNode polyFlipUV -n "polyFlipUV2";
 	setAttr ".up" yes;
 	setAttr ".pu" 0.83195275069999997;
 	setAttr ".pv" 0.49156066780000002;
+createNode polyTweakUV -n "polyTweakUV3";
+	rename -uid "C4C188E3-4735-5300-4146-3EA396B4B879";
+	setAttr ".uopa" yes;
+	setAttr -s 178 ".uvtk[0:177]" -type "float2" -0.28207773 -0.34040579 -0.29611433
+		 -0.33948329 -0.29611433 -0.35108224 -0.28207773 -0.35108224 -0.28207773 -0.36175874
+		 -0.29611433 -0.36268118 -0.22606987 -0.095734738 -0.28207773 -0.36513552 -0.24010652
+		 -0.080467246 -0.22606987 -0.080467246 -0.22606987 -0.068868302 -0.24010652 -0.069790803
+		 -0.36344886 -0.33905742 -0.27697155 0.061845705 -0.3210057 0.075288311 -0.36344886
+		 -0.35108224 -0.3210057 0.019344822 -0.26506206 0.019344822 0.33208227 -0.063090831
+		 0.28804815 -0.076533437 -0.31015092 -0.34040579 -0.31015092 -0.33702901 -0.20034871
+		 -0.071201585 -0.32183552 -0.34404317 -0.2120333 -0.069790803 -0.2120333 -0.080467246
+		 -0.20034871 -0.080467246 -0.20034871 -0.073428057 -0.2120333 -0.094520472 -0.31015092
+		 -0.36175874 -0.32183552 -0.35812148 -0.20034871 -0.089732789 -0.31015092 -0.35108224
+		 -0.32183552 -0.35108224 -0.24010652 -0.066414021 -0.27039313 -0.34404317 -0.25179106
+		 -0.071201585 -0.27039313 -0.35108224 -0.25179106 -0.089732789 -0.27039313 -0.35812148
+		 -0.25179106 -0.073428057 -0.25179106 -0.080467246 -0.1889143 -0.071201585 -0.33326983
+		 -0.34404317 -0.1889143 -0.080467246 -0.1889143 -0.073428057 -0.33326983 -0.35812148
+		 -0.1889143 -0.089732789 -0.33326983 -0.35108224 -0.2589587 -0.34404317 -0.26322547
+		 -0.071201585 -0.2589587 -0.35108224 -0.26322547 -0.089732789 -0.2589587 -0.35812148
+		 -0.26322547 -0.073428057 -0.26322547 -0.080467246 -0.17813566 -0.064639054 -0.3440485
+		 -0.33905742 -0.17813566 -0.080467246 -0.17813566 -0.068442367 -0.3440485 -0.36310717
+		 -0.17813566 -0.096295379 -0.3440485 -0.35108224 -0.24818009 -0.33905742 -0.27400416
+		 -0.064639054 -0.24818009 -0.35108224 -0.27400416 -0.096295379 -0.24818009 -0.36310717
+		 -0.27400416 -0.068442367 -0.27400416 -0.080467246 0.27613866 -0.11903436 -0.15873531
+		 -0.068442367 -0.36344886 -0.36310717 0.33208227 -0.11903436 0.37611642 -0.076533437
+		 0.38802585 -0.11903436 -0.37694925 0.019344822 -0.29340452 -0.080467246 -0.17813566
+		 -0.092492126 -0.15873531 -0.092492126 -0.1889143 -0.087506436 -0.20034871 -0.087506436
+		 -0.2120333 -0.09114363 -0.22606987 -0.092066191 -0.24010652 -0.09114363 -0.25179106
+		 -0.087506436 -0.26322547 -0.087506436 -0.27400416 -0.092492126 -0.36503983 0.061845705
+		 -0.2853449 -0.13631389 -0.29611433 -0.13631389 -0.29611433 -0.26375446 -0.2853449
+		 -0.26375446 -0.23683935 0.0068604993 -0.22606987 0.0068604993 -0.22606987 0.13430116
+		 -0.23683935 0.13430116 -0.29611433 -0.13631389 -0.239241 0.13430116 -0.3092854 -0.26375446
+		 -0.21289879 0.13430116 -0.21530047 0.13430116 -0.21530047 0.0068604993 -0.28294319
+		 -0.26375446 -0.29611433 -0.26754645 -0.28884184 -0.26754645 -0.21879739 0.0030685542
+		 -0.21795544 0.0030685542 -0.23334238 0.0030685542 -0.22606987 0.0030685542 -0.28799987
+		 -0.26754645 -0.29611433 -0.32505247 -0.28927994 -0.32505247 -0.21923548 -0.054437362
+		 -0.30367589 -0.32505247 -0.23290429 -0.054437362 -0.22606987 -0.054437362 -0.23363152
+		 -0.054437362 -0.30338681 -0.26754645 -0.30294871 -0.32505247 -0.30688381 -0.26375446
+		 -0.30688381 -0.13631389 -0.29611433 -0.32942578 -0.30338681 -0.32942578 -0.28884184
+		 -0.32942578 -0.28799987 -0.32942578 -0.23334238 -0.058810733 -0.22606987 -0.058810733
+		 -0.21879739 -0.058810733 -0.21795544 -0.058810733 -0.28207773 -0.33702901 -0.23418438
+		 -0.058810733 -0.2120333 -0.066414021 -0.30422872 -0.32942578 -0.21850824 -0.054437362
+		 -0.30422872 -0.26754645 -0.2885527 -0.32505247 -0.22606987 0.13430116 -0.28294319
+		 -0.13631389 -0.21289879 0.0068604993 -0.3092854 -0.13631389 -0.23418438 0.0030685542
+		 -0.239241 0.0068604993 -0.29611433 -0.36634979 -0.24010652 -0.094520472 -0.3210057
+		 -0.036598876 -0.29340452 -0.064639054 -0.27697155 -0.02315636 -0.15873531 -0.096295379
+		 -0.36344886 -0.33525404 -0.3440485 -0.33525404 -0.33326983 -0.34181663 -0.32183552
+		 -0.34181663 -0.27039313 -0.34181663 -0.2589587 -0.34181663 -0.24818009 -0.33525404
+		 -0.22877973 -0.36691037 -0.24818009 -0.36691037 -0.2589587 -0.3603479 -0.27039313
+		 -0.3603479 -0.31015092 -0.36513552 -0.32183552 -0.3603479 -0.33326983 -0.3603479
+		 -0.3440485 -0.36691037 -0.15873531 -0.080467246 0.28804815 -0.16153549 0.33208227
+		 -0.17497806 -0.29340452 -0.068442367 -0.22877973 -0.35108224 -0.22877973 -0.36310717
+		 0.37611642 -0.16153549 -0.36503983 -0.02315636 -0.15873531 -0.064639054 -0.29340452
+		 -0.092492126 -0.29340452 -0.096295379 -0.22877973 -0.33525404 -0.36344886 -0.36691037
+		 -0.22877973 -0.33905742;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -k on ".ihi";
@@ -963,8 +1017,8 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".bswa";
 	setAttr -k on ".shml";
 	setAttr -k on ".hwel";
-connectAttr "polyFlipUV2.out" "Hammer_MeshShape.i";
-connectAttr "polyTweakUV2.uvtk[0]" "Hammer_MeshShape.uvst[0].uvtw";
+connectAttr "polyTweakUV3.out" "Hammer_MeshShape.i";
+connectAttr "polyTweakUV3.uvtk[0]" "Hammer_MeshShape.uvst[0].uvtw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -990,6 +1044,7 @@ connectAttr "Hammer_MeshShape.wm" "polyPlanarProj2.mp";
 connectAttr "polyPlanarProj2.out" "polyTweakUV2.ip";
 connectAttr "polyTweakUV2.out" "polyFlipUV2.ip";
 connectAttr "Hammer_MeshShape.wm" "polyFlipUV2.mp";
+connectAttr "polyFlipUV2.out" "polyTweakUV3.ip";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "HammerMatte.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
