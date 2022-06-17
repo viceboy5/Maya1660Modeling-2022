@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: ChairRemodel.ma
-//Last modified: Thu, Jun 16, 2022 09:10:51 PM
+//Last modified: Thu, Jun 16, 2022 10:33:12 PM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.2";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "2E47FC69-45DF-1F64-0131-CA9ADE96C3CA";
+fileInfo "UUID" "D88147C0-464A-94ED-A396-2DBEC05BFFA5";
 createNode transform -s -n "persp";
 	rename -uid "DFEBD250-4860-1E9F-AD1D-21B371C13499";
 	setAttr ".v" no;
