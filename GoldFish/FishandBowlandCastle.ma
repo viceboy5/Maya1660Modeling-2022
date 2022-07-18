@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: FishandBowlandCastle.ma
-//Last modified: Sun, Jul 17, 2022 09:53:00 PM
+//Last modified: Sun, Jul 17, 2022 09:57:51 PM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.2";
@@ -10,18 +10,18 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22622)";
-fileInfo "UUID" "BA72DEF5-4D2E-6CF3-3A16-639FE72068EB";
+fileInfo "UUID" "721AD3BA-4AC3-5431-6AA0-149DA16B1553";
 createNode transform -s -n "persp";
 	rename -uid "4FFB279D-4FC6-B193-DFD2-F09F3218216F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.1937729230930216 26.881007450811154 101.86904752425671 ;
-	setAttr ".r" -type "double3" -372.60000000650666 5399.9999999935462 -3.7450741707989691e-18 ;
+	setAttr ".t" -type "double3" -31.029455274187018 9.7803990006660939 12.56128887355673 ;
+	setAttr ".r" -type "double3" -366.60000000858685 5334.7999999955873 0 ;
 	setAttr ".rpt" -type "double3" -5.4218565246368742e-18 -2.9289928745075873e-17 -2.8669902955908107e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "558D33D3-430D-FFAA-DE2B-5F93689B1FB7";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 93.437201418633109;
+	setAttr ".coi" 36.274616479669504;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -5666,6 +5666,7 @@ createNode nurbsCurve -n "curveShape1" -p "curve1";
 		;
 createNode transform -n "FishBowl";
 	rename -uid "7A60810C-4C75-CA85-8EFC-5EAFAACBA461";
+	setAttr ".v" no;
 createNode mesh -n "FishBowlShape" -p "FishBowl";
 	rename -uid "8B4DC74A-4078-BDDA-EC96-77B47EF864CC";
 	setAttr -k off ".v";
