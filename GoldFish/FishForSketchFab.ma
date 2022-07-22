@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
-//Name: FishandBowlandCastle.ma
-//Last modified: Thu, Jul 21, 2022 10:11:34 PM
+//Name: FishForSketchFab.ma
+//Last modified: Thu, Jul 21, 2022 10:43:14 PM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.2";
@@ -10,18 +10,18 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22622)";
-fileInfo "UUID" "792A3EAF-4FD6-83C6-5923-7C813B515377";
+fileInfo "UUID" "6BC47C78-4F93-216A-0D2C-EFBD2BE6DE9E";
 createNode transform -s -n "persp";
 	rename -uid "4FFB279D-4FC6-B193-DFD2-F09F3218216F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.156206077848072 43.682041405289098 138.48238958297017 ;
-	setAttr ".r" -type "double3" -372.59999999574984 3963.1999999988757 -4.9773775952075497e-17 ;
+	setAttr ".t" -type "double3" -4.0735302075120181 4.9473381227504944 131.42755631224196 ;
+	setAttr ".r" -type "double3" -358.19999999558621 3957.5999999934843 1.8652423931645294e-17 ;
 	setAttr ".rpt" -type "double3" -5.4218565246368742e-18 -2.9289928745075873e-17 -2.8669902955908107e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "558D33D3-430D-FFAA-DE2B-5F93689B1FB7";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 156.00227131380308;
+	setAttr ".coi" 143.21182732011857;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -82,7 +82,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "FishBowl";
 	rename -uid "7A60810C-4C75-CA85-8EFC-5EAFAACBA461";
-	setAttr ".t" -type "double3" -20.184141015230121 0 0 ;
+	setAttr ".t" -type "double3" 0.010227940194994289 0 0 ;
 createNode mesh -n "FishBowlShape" -p "FishBowl";
 	rename -uid "8B4DC74A-4078-BDDA-EC96-77B47EF864CC";
 	setAttr -k off ".v";
@@ -4458,7 +4458,7 @@ createNode mesh -n "polySurfaceShape1" -p "FishBowl";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "CastleMesh";
 	rename -uid "9BC41740-4ED4-59CD-4E87-4E8175E18FF3";
-	setAttr ".t" -type "double3" 5.228762834736405 0 1.3345959223179389 ;
+	setAttr ".t" -type "double3" -3.5189678796563504 0 1.3345959223179369 ;
 	setAttr ".r" -type "double3" 0 180 0 ;
 	setAttr ".s" -type "double3" 1.3014043458969236 1.3014043458969236 1.3014043458969236 ;
 createNode mesh -n "CastleMeshShape" -p "CastleMesh";
@@ -8400,7 +8400,8 @@ createNode mesh -n "CastleMeshShape1" -p "CastleMesh";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "FishMesh";
 	rename -uid "FA7D1095-4275-FC65-4DB4-0ABF048257FF";
-	setAttr ".t" -type "double3" 4.6014247690169707 0 -9.3258839825000344 ;
+	setAttr ".t" -type "double3" 0.054466132641419987 -0.3314867002520927 -0.40072271968422463 ;
+	setAttr ".r" -type "double3" 0 -20 0 ;
 	setAttr ".rp" -type "double3" 0 11.812593936920166 -1.586064338684082 ;
 	setAttr ".sp" -type "double3" 0 11.812593936920166 -1.586064338684082 ;
 createNode mesh -n "FishMeshShape" -p "FishMesh";
@@ -13930,19 +13931,19 @@ createNode mesh -n "polySurfaceShape2" -p "FishMesh";
 		1170 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "350CDFBA-4C59-DA63-7970-74896AAB7F3E";
+	rename -uid "A41CF9DF-4083-75BC-3377-81BCBEDFBE4F";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "6C368FBE-43E1-DE62-8991-35A8467A560C";
+	rename -uid "00D35639-4347-E173-B537-E5B27B37CF93";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "98E36660-4983-8523-924A-EAA724596B8C";
+	rename -uid "2A0FCC5C-44D5-F2F4-17B1-7494DE027AFA";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "D7D29485-40FE-343F-5378-5086FA0AEC08";
+	rename -uid "3DC7007D-44A6-D45C-5BED-E7A01C0E2637";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "98F807C4-4023-1EBE-415C-FABC1482CFA9";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "802A7666-47CC-372F-62A9-80AFAA1E5E0D";
+	rename -uid "E7925D19-435F-25EC-40EB-939D3B8D0A06";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "DA013C26-4F69-2072-9E1F-FC96023ED18A";
 	setAttr ".g" yes;
@@ -16561,4 +16562,4 @@ connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "Castle:initialShadingGroup1.msg" ":defaultShaderList1.s" -na;
 connectAttr "BowlMatte.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of FishandBowlandCastle.ma
+// End of FishForSketchFab.ma
