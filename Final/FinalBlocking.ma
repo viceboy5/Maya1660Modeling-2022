@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: FinalBlocking.ma
-//Last modified: Thu, Jul 28, 2022 06:07:41 PM
+//Last modified: Thu, Jul 28, 2022 07:52:47 PM
 //Codeset: 1252
 requires maya "2023";
 currentUnit -l centimeter -a degree -t film;
@@ -9,17 +9,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202202161415-df43006fd3";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22000)";
-fileInfo "UUID" "11366AA2-4CE9-888E-FA20-B799105089F4";
+fileInfo "UUID" "00F8A2DF-461A-D2C2-B682-608589DE1FF0";
 createNode transform -s -n "persp";
 	rename -uid "39D7ECAB-421A-62E5-4458-F4B841A2041D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.3152324382815408 5.1438978418873376 12.419518890433768 ;
-	setAttr ".r" -type "double3" 339.86164726860426 -26.600000000004144 -8.8926343756591953e-16 ;
+	setAttr ".t" -type "double3" -2.2455999722651567 2.9112974755614611 7.1983836026371275 ;
+	setAttr ".r" -type "double3" 342.86164726860312 -22.600000000004233 -8.612758563834174e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3B6ED718-4C0D-DF71-1F0F-7BAB56BD6D96";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 15.184706779168563;
+	setAttr ".coi" 10.014790385583774;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
